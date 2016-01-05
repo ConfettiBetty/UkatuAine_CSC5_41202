@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
     //Calculate or map using input or outputs
     
     //Output the results
-    cout<<"Hello World"<<endl;
+    cout<<"Hello World 2016"<<endl;
    
     //Exit
     
