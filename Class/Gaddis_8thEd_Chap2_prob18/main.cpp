@@ -1,6 +1,6 @@
 /* 
- * Author: Dr. Mark E. Lehr
- * Created on January 5, 2016, 9:20 PM
+ * Author: Aine Ukatu
+ * Created on January 6, 2016, 9:59 AM
  * Purpose:  Homework 18, chap2 Gaddis
  */
 
