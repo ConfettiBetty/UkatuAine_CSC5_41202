@@ -10,6 +10,7 @@
 #include <cmath>    //Math functions
 #include <ctime>    //Time to set at random speed
 #include <iomanip>  //Format Library
+#include <fstream>  //Reading writing to a file
 using namespace std;
 
 //User Libraries
@@ -25,18 +26,44 @@ int main(int argc, char** argv) {
     srand(static_cast<unsigned int>(time(0)));
     
     //Declare variables
+    ofstream out;//Declare a file stream object called "Output"
     float drpTime, distance;//Time in seconds, distance in feet
     
-    //Inputting the time with a random number
+    //Inputting the time with a random number and opening a file
     drpTime=rand()%11+10;//Range is [10,20] seconds
+    const int SIZE=21;
+    char fileNam[SIZE]="DropDistance.dat";
+    out.open(fileNam);
     
     //Calculate the distance dropped
     distance=0.5f*GRAVITY*drpTime*drpTime;
     
     //Output length of time it takes to drop
     cout<<"Drop Time = "<<drpTime<<"sec"<<endl;
-    cout<<"Distance Dropped = "<<distance<<"feet"<<endl;
+    cout<<fixed<<setprecision(3)<<showpoint;//Format the decimal to 3 places
+    cout<<"Distance Dropped, multiplied squared = "<<setw(9)<<distance<<"feet"<<endl;
+    
+    //Calculate the distance dropped
+    distance=0.5f*GRAVITY*pow(drpTime,2);
+    
+    //Output length of time it takes to drop
+    cout<<"Drop Time = "<<drpTime<<"sec"<<endl;
+    cout<<fixed<<setprecision(3)<<showpoint;//Format the decimal to 3 places
+    cout<<"Distance Dropped, raised to a power = "<<setw(9)<<distance<<"feet"<<endl;
+    
+     //Calculate the distance dropped
+    distance=0.5f*GRAVITY*exp(2*log(drpTime));
+    
+    //Output length of time it takes to drop
+    cout<<"Drop Time = "<<drpTime<<"sec"<<endl;
+    cout<<fixed<<setprecision(3)<<showpoint;//Format the decimal to 3 places
+    cout<<"Distance Dropped, exponential of the log = "<<setw(9)<<distance<<"feet"<<endl;
+    
+    //Output results to a file
+    out<<fixed<<setprecision(3)<<showpoint;//Format the decimal to 3 places
+    out<<"Distance Dropped, exponential of the log = "<<setw(9)<<distance<<"feet"<<endl;
     
     //Exit stage right
+    out.close();
     return 0;
 }
