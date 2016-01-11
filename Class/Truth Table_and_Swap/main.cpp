@@ -1,6 +1,6 @@
 /* 
     File:   main.cpp
-    Author: Dr. Mark E. Lehr
+    Author: Aine Ukatu
     Created on January 11, 2016, 9:00 AM
     Purpose: Display Truth Table, Compare swaps
   */

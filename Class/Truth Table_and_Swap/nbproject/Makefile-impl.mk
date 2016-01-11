@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Truth Table
+PROJECTNAME=Truth Table_and_Swap
 
 # Active Configuration
 DEFAULTCONF=Debug
