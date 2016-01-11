@@ -23,15 +23,15 @@ int main(int argc, char** argv) {
     char letO='O'
     
     //Output the results
-    cout<<"  "<<letC<<letC<<letC<<"       "<<letS<<letS<<letS<<letS<<"    "<<exclmtn<<exclmtn<<endl;
-    cout<<" "<<letC<<"   "<<letC<<"     "<<letS<<"    "<<letS<<"   "<<exclmtn<<exclmtn<<endl;
-    cout<<letC<<"         "<<letS<<"    "<<letS<<"   "<<exclmtn<<exclmtn<<endl;
+    ;cout<<"  "<<letC<<letC<<letC<<"       "<<letS<<letS<<letS<<letS<<"     "<<exclmtn<<exclmtn<<endl;
+    cout<<" "<<letC<<"   "<<letC<<"     "<<letS<<"    "<<letS<<"    "<<exclmtn<<exclmtn<<endl;
+    cout<<letC<<"         "<<letS<<"      "<<letS<<"   "<<exclmtn<<exclmtn<<endl;
     cout<<letC<<"           "<<letS<<"        "<<exclmtn<<exclmtn<<endl;
     cout<<letC<<"            "<<letS<<letS<<letS<<"     "<<exclmtn<<exclmtn<<endl;
     cout<<letC<<"               "<<letS<<"    "<<exclmtn<<exclmtn<<endl;
-    cout<<letC<<"               "<<letS<<"   "<<exclmtn<<exclmtn<<endl;
-    cout<<" "<<letC<<"   "<<letC<<"             "<<letS<<"    "<<exclmtn<<exclmtn<<endl;
-    cout<<"  "<<letC<<letC<<letC<<"      "<<letS<<letS<<letS<<letS<<"     "<<letO<<letO<<endl;
+    cout<<letC<<"                "<<letS<<"   "<<exclmtn<<exclmtn<<endl;
+    cout<<" "<<letC<<"   "<<letC<<"          "<<letS<<"    "<<exclmtn<<exclmtn<<endl;
+    cout<<"  "<<letC<<letC<<letC<<"       "<<letS<<letS<<letS<<letS<<"     "<<letO<<letO<<endl;
     //Exit
     
     return 0;
