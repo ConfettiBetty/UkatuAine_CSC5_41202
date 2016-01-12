@@ -45,8 +45,10 @@ int main(int argc, char** argv) {
     float ovrTme;        
     
     //Determine if regular or overtime pay, and amount
+    
     ovrTme=1.5*pyrtReg;
-    cout<<""
+    hrsWkd1*pyrtReg
+    cout<<"Your paycheck = $"<<payCheck<<endl;
 
 
     
