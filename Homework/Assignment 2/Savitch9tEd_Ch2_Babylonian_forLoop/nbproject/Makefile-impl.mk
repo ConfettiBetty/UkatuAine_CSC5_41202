@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Savitch9tEd_Ch2_prob2Babylonian
+PROJECTNAME=Savitch9tEd_Ch2_Babylonian_forLoop
 
 # Active Configuration
 DEFAULTCONF=Debug
