@@ -24,7 +24,8 @@ int main(int argc, char** argv) {
     //Declare and initialize variables
     float n;//Input the value to obtain it's square root
     float r, guess; //intermediate values which asymptotically approach sqrt (n))
-    float tol=0.1f; //(tolerance) accuracy of the result
+    float tol=0.001f; //(tolerance) accuracy of the result
+    int counter=0;  //See how many loops it took to get the answer
     
     //Input data
     cout<<"Input the value to square root of "<<endl;
@@ -33,9 +34,7 @@ int main(int argc, char** argv) {
     //Approximate the square root at first pass
     
     guess=n/2; //Only perform this once to start the process
-    r=n/guess;
-    guess=(guess+r)/2;
-    
+      
     //Output the results
 
     cout<<"The input value             = "<<n<<endl;
@@ -46,12 +45,14 @@ int main(int argc, char** argv) {
     do{
         r=n/guess;
         guess=(guess+r)/2;
+        counter++;
     }  while(abs((r-guess)/guess)*100>tol);
         
     //Output the results
  
     cout<<"The second pass r   = "<<r<<endl;
     cout<<"The second guess  = "<<guess<<endl;
+    cout<<"It looped "<<counter<<endl;
     
  
     //Exit stage right
