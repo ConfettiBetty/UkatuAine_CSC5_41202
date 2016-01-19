@@ -1,8 +1,8 @@
 /* 
     File:   main.cpp
-    Author: Dr. Mark E. Lehr
-    Created on January 4, 2016, 10:18 AM
-    Purpose:  Check out IDE, Helloworld
+    Author: Aine (Phyllis) Ukatu
+    Created on January 19, 2016, 9:33 AM
+    Purpose:  Savitch8th Ed, Ch3 Prob 10
  */
 
 //System Libraries
@@ -23,11 +23,11 @@ int main(int argc, char** argv) {
                 cout<<endl<<"The Fibonacci Sequence"<<endl<<endl;
                 //Declare variables
                 unsigned int fi,fim1,fim2;//Designations in the sequence
-                unsigned short nTerms;//Number of terms in the sequence
-                unsigned short counter;//current position in the sequence
-                const char DREPRO=5;//Days to reproduce
-                float crudWt; //Weight of crud
-                unsigned int nDays;//Number of days to grow crud
+                unsigned short nTerms;    //Number of terms in the sequence
+                unsigned short counter;   //current position in the sequence
+                const char DREPRO=5;      //Days to reproduce
+                float crudWt;             //Weight of crud
+                unsigned int nDays;       //Number of days to grow crud
                 //Initialize Sequence
                 fim2=fim1=1;//start sequence
                 counter=2;//Initialize counter
