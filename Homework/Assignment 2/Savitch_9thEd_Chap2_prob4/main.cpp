@@ -19,15 +19,14 @@ using namespace std;
 int main(int argc, char** argv) {
  
     //Declare and initialize variables
-    char frstNam; //Instructor's First Name
-    char myNam;//Student's First Name
-    char food;//A food
+    string frstNam; //Instructor's First Name
+    string myNam;//Student's First Name
+    string food;//A food
     short number;//Any number between 100 and 120
-    char color;//Any color
-    char animal;//Any animal
- 
-    //Set parameter
-    number>=100,number<=120;"Invalid entry, please pick a number between 100 and 120.";
+    string color;//Any color
+    string animal;//Any animal
+
+
  
     //Ask the survey questions
     cout<<"What is your instructor's first name?"<<endl;
@@ -38,6 +37,10 @@ int main(int argc, char** argv) {
      cin>>food;
     cout<<"Pick a number between 100 and 120."<<endl;
      cin>>number;
+
+    //Set parameter
+    number>=100,number<=120? "Number is good":(cout<<"Number must be between 100 and 120");
+    
     cout<<"Type any color."<<endl;
      cin>>color;
     cout<<"Choose any animal."<<endl;
