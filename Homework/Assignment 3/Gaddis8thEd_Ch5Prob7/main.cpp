@@ -33,9 +33,9 @@ int main(int argc, char** argv) {
     cout<<setw(4)<<1<<setw(15)<<salary/100.0f<<setw(15)<<totPay/100.0f<<endl;
     for(int day=2;day<=31;day++){
         //salary*=2;
-        salary<<=1;
+        salary<<=1; //Bit shift right by one bit
         totPay+=salary;
-        cout<<setw(4)<<day<<setw(15)<<salary/100.0f<<setw(15)<<totPay/100.0f<<endl;
+        cout<<setw(4)<<day<<setw(15)<<salary/100.0<<setw(15)<<totPay/100.0<<endl;
     }
     //Exit stage right
     return 0;
