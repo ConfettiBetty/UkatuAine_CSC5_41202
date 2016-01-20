@@ -40,7 +40,6 @@ int main(int argc, char** argv) {
 
     //Set parameter
     number>=100,number<=120? "Number is good":(cout<<"Number must be between 100 and 120");
-    
     cout<<"Type any color."<<endl;
      cin>>color;
     cout<<"Choose any animal."<<endl;
