@@ -3,6 +3,8 @@
     Author: Aine (Phyllis) Ukatu
     Created on January 20, 2016, 11:12 AM
     Purpose: Double your pennies everyday! A salary table.
+                Double is required due to number of significant 
+                digits for anything > $99,999.99
  */
 
 //System Libraries
@@ -25,7 +27,7 @@ int main(int argc, char** argv) {
     
     //Declare variables
     unsigned int salary=1;      //Salary starting as a penny
-    float totPay=salary;          //Sum of the salaries
+    double totPay=salary;          //Sum of the salaries
     
     //Loop to generate the salary table with total paid
     cout<<" Day           Salary($)      Total($)"<<endl;
