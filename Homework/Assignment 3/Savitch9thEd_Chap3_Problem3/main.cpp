@@ -50,6 +50,53 @@ int main(int argc, char** argv) {
     cout<<"The number of ones = "<<static_cast<int>(n1s)<<endl;
         
     //Output the results
+    cout<<"The Roman Numeral equivalent = ";
+    
+    //Output the 1000s
+    switch(n1000s){
+        case 3: cout<<"M";
+        case 2: cout<<"M";
+        case 1: cout<<"M";
+    }
+    
+    //Output the 100s
+    switch(n100s){
+        case 9: cout<<"CM";break;
+        case 8: cout<<"DCCC";break;
+        case 7: cout<<"DCC";break;
+        case 6: cout<<"DC";break;
+        case 5: cout<<"D";break;
+        case 4: cout<<"CD";break;
+        case 3: cout<<"C";
+        case 2: cout<<"C";
+        case 1: cout<<"C";
+    }
+    
+    //Output the 10s
+    switch(n10s){
+        case 9: cout<<"XC";break;
+        case 8: cout<<"LXXX";break;
+        case 7: cout<<"LXX";break;
+        case 6: cout<<"LX";break;
+        case 5: cout<<"L";break;
+        case 4: cout<<"XL";break;
+        case 3: cout<<"X";
+        case 2: cout<<"X";
+        case 1: cout<<"X";
+    }    
+    
+    //Output the 1s
+    switch(n1s){
+        case 9: cout<<"IX";break;
+        case 8: cout<<"VIII";break;
+        case 7: cout<<"VII";break;
+        case 6: cout<<"VI";break;
+        case 5: cout<<"V";break;
+        case 4: cout<<"IV";break;
+        case 3: cout<<"III";
+        case 2: cout<<"II";
+        case 1: cout<<"I";
+    }    
     
     //Exit stage right
     return 0;
