@@ -44,7 +44,7 @@ int main(int argc, char** argv) {
     do{
         infYear=price*inflate;
         price*=(1+inflate);
-        cout<<setw(4)<<y++<<" "<<year<<setw(8)<<price<<setw(9)<infYear<<endl;
+        cout<<setw(4)<<y<<" "<<year<<setw(8)<<price<<setw(9)<infYear<<endl;
       }
     
     //Exit stage right
