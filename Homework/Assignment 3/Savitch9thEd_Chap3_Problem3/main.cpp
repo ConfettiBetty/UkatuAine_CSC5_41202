@@ -58,7 +58,6 @@ int main(int argc, char** argv) {
         case 2: cout<<"M";
         case 1: cout<<"M";
     }
-    
     //Output the 100s
     switch(n100s){
         case 9: cout<<"CM";break;
@@ -71,7 +70,6 @@ int main(int argc, char** argv) {
         case 2: cout<<"C";
         case 1: cout<<"C";
     }
-    
     //Output the 10s
     switch(n10s){
         case 9: cout<<"XC";break;
@@ -84,7 +82,6 @@ int main(int argc, char** argv) {
         case 2: cout<<"X";
         case 1: cout<<"X";
     }    
-    
     //Output the 1s
     switch(n1s){
         case 9: cout<<"IX";break;
@@ -97,7 +94,6 @@ int main(int argc, char** argv) {
         case 2: cout<<"II";
         case 1: cout<<"I";
     }    
-    
     //Exit stage right
     return 0;
 }
