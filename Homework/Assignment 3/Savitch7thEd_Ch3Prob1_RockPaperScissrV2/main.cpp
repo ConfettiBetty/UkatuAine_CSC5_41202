@@ -28,6 +28,7 @@ int main(int argc, char** argv) {
     
     //Set the random number seed and declare the question
     srand(static_cast<unsigned int>(time(0)));
+    char qwstion; //Do you want to keep playing with computer?
     
     //Loop until the player wants to quit
     do{
@@ -35,8 +36,7 @@ int main(int argc, char** argv) {
     //Declare and initialize variables
     char computr; //Computer's play hand value
     char player;  //Player's move
-    char qwstion; //Question, does player want to keep playing
-    
+        
     //Input player's turn
     do{
         cout<<"What's your move: P, R, or S?"<<endl;
@@ -54,7 +54,7 @@ int main(int argc, char** argv) {
     cout<<"The Players move "<<player<<endl;
     
     //Determine the result
-    if(computr==player)cout{
+    if(computr==player){
         cout<<"The result is a tie"<<endl;
     }else if(player=='P'&&computr=='R'){
             cout<<"The Player wins!"<<endl;
@@ -64,9 +64,10 @@ int main(int argc, char** argv) {
             cout<<"The Player wins!"<<endl;
     }else{
         cout<<"The Player loses. :-("<<endl;
+    }
 
-    //Kepp playing?
-    cout<<end<<"Do you want to continue playing?"<<endl;
+    //Keep on playing?
+    cout<<endl<<"Do you want to continue playing?"<<endl;
     cin>>qwstion;
     }while(toupper(qwstion)=='Y');
     //Exit stage right
