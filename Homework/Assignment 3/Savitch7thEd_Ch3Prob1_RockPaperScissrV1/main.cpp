@@ -6,17 +6,14 @@
  */
 
 //System Libraries
-#include <iostream>
-#include <cmath>
-#include <cstdlib>
-#include <iomanip>
-#include <ctime>
+#include <iostream> //I/O
+#include <cstdlib>  //Random function
+#include <ctime>    //Time for random setting
 using namespace std;
 
 //User Libraries
 
 //Global Constants
-
 
 //Function prototypes
 
@@ -26,11 +23,19 @@ int main(int argc, char** argv) {
     cout<<endl<<"Savitch 7thEd Chapter 3 Problem 1"<<endl;
     cout<<endl<<"The Rock Paper Scissors Game"<<endl;
     
+    //Set the randomizing seed
+    srand(static_cast<unsigned int>(time(0)));
+    
     //Declare and initialize variables
     char computr; //Computer's play hand value
+    char player;  //Player's hand value
     
-    //Input values
-    
+    //Input values for player
+    do{
+        cout<<"Do you want to play R, P, or S? (Enter only upper case)"<<endl;
+        cin>>player;
+    }while(!(player=='P')||(player=='R')||(player=='S'));
+        
     //Computer generated play
     do{
         computr=rand()%4+80;
@@ -38,6 +43,7 @@ int main(int argc, char** argv) {
         
     //Output the results
     cout<<"The computer played "<<computr<<endl;
+    cout<<"The player's move:"<<player<<endl;
     
     //Exit stage right
     return 0;
