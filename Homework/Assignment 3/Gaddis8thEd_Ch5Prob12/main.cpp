@@ -29,12 +29,12 @@ int main(int argc, char** argv) {
     unsigned char  c1=0,c2=100,f1=32,f2=212; //Freezing and boiling temps for F and C
     
     //Loop to generate the degree Celsius and output the table
-    cout<<"Fahrenheit  Celsius  Celsius"<<endl;
+    cout<<"Fahrenheit    Celsius    Celsius"<<endl;
     cout<<fixed<<setprecision(2)<<showpoint;
-    for(int f=f1;f<=f2;f++){
+    for(int f=f1;f<=f2;f=f+1){
         float ceq=slope*(f+intrcpt); //Celsius equation
-        float cintrp=c1+static_cast<float>(f-f1)/(f2=f1)*(c2-c1); //Celsius intercept
-        cout<<setw(10)<<f<<setw(10)<<ceq<<setw(10)<<cintrp<<endl;
+        float cintrp=c1+static_cast<float>(f-f1)/(f2-f1)*(c2-c1); //Celsius intercept
+        cout<<setw(9)<<f<<setw(10)<<ceq<<setw(11)<<cintrp<<endl;
     }
     //Exit stage right
     return 0;
