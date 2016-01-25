@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Debug=assignment3_menu_homework
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/assignment3_menu_homework
+CND_ARTIFACT_NAME_Debug=powerfunction
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/powerfunction
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Debug=assignment3menuhomework.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/assignment3menuhomework.tar
+CND_PACKAGE_NAME_Debug=powerfunction.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/powerfunction.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Release=assignment3_menu_homework
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/assignment3_menu_homework
+CND_ARTIFACT_NAME_Release=powerfunction
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/powerfunction
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Release=assignment3menuhomework.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/assignment3menuhomework.tar
+CND_PACKAGE_NAME_Release=powerfunction.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/powerfunction.tar
 #
 # include compiler specific variables
 #

@@ -1,8 +1,8 @@
 /* 
     File:   main.cpp
     Author: Aine (Phyllis) Ukatu
-    Created on January 4, 2016, 10:42 AM
-    Purpose:  e to the x, e^x Calculation, Savitch8Ed, Ch3, prob11
+    Created on January 25, 2016, 8:04 AM
+    Purpose:  Homework 5 Menu
  */
 
 //System Libraries
@@ -17,6 +17,7 @@ using namespace std;
 const float PI=4*atan(1);//Universal Constant 3.1415 etc
 
 //Function prototypes
+void problem1(); //Calling problem 1
 
 //Execution Begins Here
 int main(int argc, char** argv) {
@@ -166,5 +167,9 @@ int main(int argc, char** argv) {
     //Exit stage right
     return 0;
 }
-
-        
+/******************************************************************************/
+/******************************Problem 1***************************************/
+/******************************************************************************/
+void problem1(){
+    
+}
