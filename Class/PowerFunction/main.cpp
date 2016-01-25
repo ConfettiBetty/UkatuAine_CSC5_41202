@@ -21,8 +21,9 @@ int power(int,int);
 //Executive Begins Here
 int main(int argc, char** argv) {
     //Variables o be used in timing
-    unsigned int begi,endi,begd,endd,loop=100000000;
     //Beginning and ending of integer vs double function
+    unsigned int begi,endi,begd,endd,loop=100000000;
+    
     
     //Declare and initialize variables
     int x;//Base of the problem
@@ -56,6 +57,7 @@ int main(int argc, char** argv) {
     //Output the results
     cout<<"Library Function Result "<<dx<<"^"<<dy<<" = "<<dz<<endl;
     cout<<"The total time taken = "<<endd-begd<<" seconds "<<endl;
+    
     
     //Exit
     
