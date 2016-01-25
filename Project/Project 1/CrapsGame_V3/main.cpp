@@ -8,6 +8,7 @@
 #include <iostream> //I/O
 #include <cstdlib>  //srand and ran function
 #include <ctime>    //time to set random function
+#include <fstream>  //File I/O
 
 using namespace std;
 
@@ -22,18 +23,16 @@ int main(int argc, char** argv) {
     //Set the random number seed
     srand(static_cast<unsigned int>(time(0)));
     //Declare and initialize variables
+    //Frequency of our dice throws
     unsigned short wins=0,losses=0;
+    ofstream out;
+    //Open File
+    out.open("CardGame.dat");
     
     //Input data
-    cout<<"How many games of craps would you like to play?"<<endl;
-    cout<<"Type a number between 10,000 and 40,000."<<endl;
-    cin>>games;
-    while(games<10000||games>40000){
-        
-    }
     
     //Throw the dice
-    for(int game=1;game<=GAMES;game++){
+    for(int game=1;game<=games;game++){
         char die1=rand()%6+1;// Gives us a number between 1 and 6
         char die2=rand()%6+1;// Gives us a number between 1 and 6
         char sum=die1+die2;
@@ -46,23 +45,35 @@ int main(int argc, char** argv) {
                 die1=rand()%6+1;// Gives us a number between 1 and 6
                 die2=rand()%6+1;// Gives us a number between 1 and 6
                 char sum2=die1+die2;
-                switch(sum2==7){
+                switch(sum2==7)
                     case true:{losses++;kpRln=false;}
                     default:
-                        if(sum==sum2){wins++;kpRln=false;}             
-            }
+                        if(sum==sum2){case true: {wins++;kpRln=false;} 
+                        }
             }while(kpRln);       //Keep rolling
         }
-    
+    }
     
     //Output the results
-    cout<<"Out of "<<GAMES<<" played,"<<endl;
+    cout<<"Out of "<<games<<" played,"<<endl;
     cout<<"You won "<<wins<<" games and "<<endl;
     cout<<"You lost "<<losses<<" games"<<endl;
     cout<<"Percentage wise"<<endl;
-    cout<<"You won "<<100.0f*wins/GAMES<<" % of the time, and"<<endl;
-    cout<<"you lost "<<100.f*losses/GAMES<<" % of the time."<<endl;
+    cout<<"You won "<<100.0f*wins/games<<" % of the time, and"<<endl;
+    cout<<"you lost "<<100.f*losses/games<<" % of the time."<<endl;
     cout<<"Your wins and losses total = "<<wins+losses<<endl;
+    
+    //Output the results to a file
+    out<<"Out of "<<games<<" played,"<<endl;
+    out<<"You won "<<wins<<" games and "<<endl;
+    out<<"You lost "<<losses<<" games"<<endl;
+    out<<"Percentage wise"<<endl;
+    out<<"You won "<<100.0f*wins/games<<" % of the time, and"<<endl;
+    out<<"you lost "<<100.f*losses/games<<" % of the time."<<endl;
+    out<<"Your wins and losses total = "<<wins+losses<<endl;
+    
+    out.close("CardGame.dat");
+    
     
     //Exit
     
