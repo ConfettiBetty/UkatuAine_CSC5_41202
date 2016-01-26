@@ -41,7 +41,7 @@ int main(int argc, char** argv) {
         cout<<"Utilize a number between 10,000 and 40,000."<<endl;
         cin>>games;
     }
-    cout<<"How much do you have to gamble?"<<endl;
+    cout<<"How much do you have to gamble? Only dollars, no cents."<<endl;
     cin>>wallet;
     cout<<"How much would you like to bet per game?"<<endl;
     cin>>bet;
@@ -71,14 +71,19 @@ int main(int argc, char** argv) {
                 die1=rand()%6+1;// Gives us a number between 1 and 6
                 die2=rand()%6+1;// Gives us a number between 1 and 6
                 char sum2=die1+die2;
-                switch(sum2==7)
+                switch(sum2==7){
                     case true:{
                         losses++;
-                        wallet
+                        wallet-=bet;
+                        kpRln=false;
+                    }
                     default:
                         if(sum==sum2){
-                            wins++;kpRln=false;} 
+                            wins++;
+                            wallet+=bet;
+                            kpRln=false;
                         }
+            }
             }while(kpRln);       //Keep rolling
         }
     }
@@ -104,11 +109,8 @@ int main(int argc, char** argv) {
     out<<"you lost "<<100.f*losses/games<<" % of the time."<<endl;
     out<<"Your wins and losses total = "<<wins+losses<<endl;
     
-    out.close("CardGame.dat");
-    
-    
     //Exit
-    
+    out.close();
     return 0;
 
-                                }
+}
