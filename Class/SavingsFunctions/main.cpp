@@ -17,10 +17,13 @@ using namespace std;
 const char PERCENT=100;         //Convert (Decimal to Percentage)
 
 //Function prototypes
-float save1(float,float,int);
-float save2(float,float,int);
-float save3(float,float,int);
-float save4(float,float,int);
+float save1(float,float,int);//Power
+float save2(float,float,int);//Exponential and log
+float save3(float,float,int);//For loops
+float save4(float,float,int); //For loops with pennies
+float save5(float,float,int);//Recursion
+float save6(float,int,float=0.05f);//Defaulted save function
+float save7(float,float,int);//For loops and static variable
 
 //Execution Begins Here
 int main(int argc, char** argv) {
@@ -46,6 +49,14 @@ int main(int argc, char** argv) {
             <<save3(pv, intRate/PERCENT,nCmpd)<<endl;
     cout<<"The banking version, using for-loops            = $"
             <<save4(pv, intRate/PERCENT,nCmpd)<<endl;
+    cout<<"The savings using recursion                     = $"
+            <<save5(pv, intRate/PERCENT,nCmpd)<<endl;
+    cout<<"The savings exponential defaulting interest 5%  = $"
+            <<save6(pv, nCmpd)<<endl; //Don't have to show the defaults
+    cout<<"The savings using For-loops with Static Counter = $"
+            <<save7(pv, intRate/PERCENT,nCmpd)<<endl;
+    cout<<"The savings using For-loops with Static Counter = $"
+            <<save7(pv, intRate/PERCENT,nCmpd)<<endl;
 
     //Exit stage right
     return 0;
@@ -109,5 +120,53 @@ float save4(float p,float i,int n){
         ip*=(1+i);
     }
     p=static_cast<float>(ip)/PERCENT;//Returning it to dollars
+    return p;
+}
+//111111112222222222333333333444444444455555555556666666666777777777788888888889
+//345678901234567890234567890123456789012345678901234567890123456789012345678901
+/*******************************SAVE5 FUNCTION*********************************/
+//Note: Recursion
+//Inputs
+// p-> Present value in $'s
+// i-> Interest Rate in %
+// n-> Number of compounding periods
+//Output
+// fv-> Future Value in $'s
+//Note: Using the power function
+float save5(float p,float i,int n){
+    if(n==0)return p; //All recursive functions have to have 
+                      //a base condition like this
+    return save5(p,i,n-1)*(1+i);
+}
+//111111112222222222333333333444444444455555555556666666666777777777788888888889
+//345678901234567890234567890123456789012345678901234567890123456789012345678901
+/*******************************SAVE6 FUNCTION*********************************/
+//Note: Defaulted exponential default interest
+//Inputs
+// p-> Present value in $'s
+// i-> Interest Rate in %
+// n-> Number of compounding periods
+//Output
+// fv-> Future Value in $'s
+float save6(float p,float i,int n){
+    return p*pow((1+i),n);
+}
+//111111112222222222333333333444444444455555555556666666666777777777788888888889
+//345678901234567890234567890123456789012345678901234567890123456789012345678901
+/*******************************SAVE7 FUNCTION*********************************/
+//Inputs
+// p-> Present value in $'s
+// i-> Interest Rate in %
+// n-> Number of compounding periods
+//Output
+// fv-> Future Value in $'s
+//Note: Using the power function
+float save7(float p,float i,int n){
+    static int nCalls=0;
+    for(int years=1;years<=n;years++){
+        p*=(1+i);
+    }
+    nCalls++;
+    cout<<"This function save7 contains a static counter = "<<nCalls<<endl;
     return p;
 }
